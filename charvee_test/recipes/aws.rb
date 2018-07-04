@@ -6,7 +6,7 @@ puts 'install awscli'
 #	action :rung
 #end
 
-python_package 'awscli' do
+python 'awscli' do
   action :install
  
 end
