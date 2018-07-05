@@ -7,7 +7,17 @@ long_description 'Installs/Configures charvee_test'
 version '0.1.0'
 chef_version '>= 12.14' if respond_to?(:chef_version)
 
-depends 'cloud_cli_aws'
+#epends 'cloud_cli_aws'
+
+
+name        "deployfile"
+description "Deploy File From S3"
+maintainer  "charvee"
+license     "Apache 2.0"
+version     "1.0.0"
+
+depends "aws"
+
 
 
 
