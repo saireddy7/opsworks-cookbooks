@@ -1,16 +1,16 @@
 
 #property :region, String, default: lazy { fallback_region }
 #property :delete_all_objects, [true, false], default: false
-property :versioning, [true, false], default: false, desired_state: false
+#property :versioning, [true, false], default: false, desired_state: false
 
 # authentication
-property :aws_access_key, String
-property :aws_secret_access_key, String
-property :aws_session_token, String
-property :aws_assume_role_arn, String
-property :aws_role_session_name, String
+#property :aws_access_key, String
+#property :aws_secret_access_key, String
+#property :aws_session_token, String
+#property :aws_assume_role_arn, String
+#property :aws_role_session_name, String
 
-include AwsCookbook::Ec2 # needed for aws_region helper
+#include AwsCookbook::Ec2 # needed for aws_region helper
 
 action :create do
   if s3_bucket.exists?
