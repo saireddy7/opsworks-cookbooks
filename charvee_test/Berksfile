@@ -4,5 +4,5 @@ source 'https://supermarket.chef.io'
 #cookbook 'aws', '~> 7.4.0'
 #metadata
 
-cookbook 'git', '~> 9.0.1'
+cookbook 'git', '~> 4.3'
 metadata
