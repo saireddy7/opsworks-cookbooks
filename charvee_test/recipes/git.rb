@@ -1,3 +1,5 @@
+puts 'charvee git example'
+
 include_recipe 'git'
 
 git "var/www/html/" do
