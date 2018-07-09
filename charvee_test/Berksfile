@@ -1,8 +1,8 @@
 # frozen_string_literal: true
 source 'https://supermarket.chef.io'
 
-cookbook 'aws', '~> 7.4.0'
-metadata
+#cookbook 'aws', '~> 7.4.0'
+#metadata
 
 cookbook 'git', '~> 9.0.1'
 metadata

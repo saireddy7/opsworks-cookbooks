@@ -10,13 +10,13 @@ chef_version '>= 12.14' if respond_to?(:chef_version)
 #epends 'cloud_cli_aws'
 
 
-name        "deployfile"
-description "Deploy File From S3"
-maintainer  "charvee"
-license     "Apache 2.0"
-version     "1.0.0"
+#name        "deployfile"
+#description "Deploy File From S3"
+#maintainer  "charvee"
+#license     "Apache 2.0"
+#version     "1.0.0"
 
-depends "aws"
+#depends "aws"
 
 depends "git"
 
