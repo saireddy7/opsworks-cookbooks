@@ -10,7 +10,7 @@
 
 
 execute 'test' do
-	command 'echo "hello'
+	command 'echo "hello"'
 #command 'vi etc/test.txt'
  #  code 'echo "[credential] \nhelper = !aws --profile CodeCommitProfile codecommit credential-helper $@ \nUseHttpPath = true \n\n[user] \nemail = charvee@example.com \nname = testuser" > ~/.gitconfig'
   # command 'git clone https://git-codecommit.us-east-1.amazonaws.com/v1/repos/myapp-codecommit'
