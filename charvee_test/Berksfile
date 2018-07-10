@@ -11,3 +11,5 @@ cookbook 'build-essential', '~> 8.1.1'
 metadata
 
 
+cookbook 'seven_zip', '~> 3.0.0'
+metadata
