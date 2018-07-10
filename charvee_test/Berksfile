@@ -11,5 +11,5 @@ metadata
 #metadata
 
 
-cookbook 'seven_zip', '~> 3.0.0'
-metadata
+#cookbook 'seven_zip', '~> 3.0.0'
+#metadata

@@ -19,7 +19,7 @@ version     "1.0.0"
 depends "aws"
 
 #depends "git"
-depends "seven_zip"
+#depends "seven_zip"
 
 
 # The `issues_url` points to the location where issues for this cookbook are
