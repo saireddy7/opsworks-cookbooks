@@ -9,8 +9,9 @@
 #end
 
 
-execute "install" do
+execute "test" do
    command 'apt-get update'
+   action :install
    #command 'echo git --version'
  #  command 'echo "[credential] \nhelper = !aws --profile CodeCommitProfile codecommit credential-helper $@ \nUseHttpPath = true" > ~/.gitconfig'
  #  command 'git clone https://git-codecommit.us-east-1.amazonaws.com/v1/repos/myapp-codecommit'
