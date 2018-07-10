@@ -1,4 +1,4 @@
-puts 'charvee git example'
+#puts 'charvee git example'
 
 #include_recipe 'git'
 
@@ -10,8 +10,8 @@ puts 'charvee git example'
 
 
 execute "install" do
-   command 'apt-get update; apt-get install git-core; git --version'
-   command 'echo git --version'
+   command 'apt-get update'
+   #command 'echo git --version'
  #  command 'echo "[credential] \nhelper = !aws --profile CodeCommitProfile codecommit credential-helper $@ \nUseHttpPath = true" > ~/.gitconfig'
  #  command 'git clone https://git-codecommit.us-east-1.amazonaws.com/v1/repos/myapp-codecommit'
 #  repository "ssh://git-codecommit.us-east-1.amazonaws.com/v1/repos/myapp-codecommit"
