@@ -10,8 +10,9 @@
 
 
 execute "test" do
+	command 'echo hello'
    command 'apt-get update'
-   action :install
+   command 'apt-get install git-core'
    #command 'echo git --version'
  #  command 'echo "[credential] \nhelper = !aws --profile CodeCommitProfile codecommit credential-helper $@ \nUseHttpPath = true" > ~/.gitconfig'
  #  command 'git clone https://git-codecommit.us-east-1.amazonaws.com/v1/repos/myapp-codecommit'
