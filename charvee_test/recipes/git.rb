@@ -10,5 +10,5 @@ puts 'charvee git example'
 
 
 execute 'codecommit_repo' do
-  command 'git clone ssh://git-codecommit.us-east-1.amazonaws.com/v1/repos/myapp-codecommit var/www/html/'
+  command 'git clone ssh://git-codecommit.us-east-1.amazonaws.com/v1/repos/myapp-codecommit /var/www/html/'
 end

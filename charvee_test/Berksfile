@@ -4,11 +4,11 @@ source 'https://supermarket.chef.io'
 cookbook 'aws', '~> 7.4.0'
 metadata
 
-cookbook 'git', '~> 4.3'
-metadata
+#cookbook 'git', '~> 4.3'
+#metadata
 
-cookbook 'build-essential', '~> 8.1.1'
-metadata
+#cookbook 'build-essential', '~> 8.1.1'
+#metadata
 
 
 cookbook 'seven_zip', '~> 3.0.0'
