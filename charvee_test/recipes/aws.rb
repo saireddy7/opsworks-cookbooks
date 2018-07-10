@@ -23,3 +23,5 @@ aws_s3_file "var/www/html/" do
   aws_access_key_id node[:awscli][:aws_access_key_id]
   aws_secret_access_key node[:awscli][:aws_secret_access_key]
 end
+
+
