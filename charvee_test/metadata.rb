@@ -18,7 +18,7 @@ version     "1.0.0"
 
 depends "aws"
 
-#depends "git"
+depends "git"
 
 
 
