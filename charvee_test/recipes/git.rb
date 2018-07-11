@@ -17,7 +17,7 @@ execute 'test' do
 	#command ''+(git describe --abbrev=0 --tags)+''
     command 'echo "git describe --abbrev=0 --tags" > ~/test.txt'
   #  command 'echo $output'
-    cwd "/home/myapp-codecommit"
+    cwd "myapp-codecommit"
 
 
 
