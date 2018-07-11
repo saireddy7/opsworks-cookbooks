@@ -15,7 +15,11 @@ execute 'test' do
 	#command 'git clone https://node[:awscli][:GIT_USER]:node[:awscli][:GIT_PASS]@git-codecommit.us-east-1.amazonaws.com/v1/repos/myapp-codecommit'
 #command 'vi etc/test.txt'
   #code 'echo "[credential] \nhelper = !aws --profile CodeCommitProfile codecommit credential-helper $@ \nUseHttpPath = true \n\n[user] \nemail = charvee@example.com \nname = testuser" > ~/.gitconfig'
-   command 'git clone https://git-codecommit.us-east-1.amazonaws.com/v1/repos/myapp-codecommit'
+   command 'echo "machine git-codecommit.us-east-1.amazonaws.com" >> ~/.netrc'
+   command 'echo "login node[:awscli][:GIT_USER]" >> ~/.netrc'
+   command 'echo "password node[:awscli][:GIT_PASS]" >> ~/.netrc'
+   command 'git clone -b master https://git-codecommit.us-east-1.amazonaws.com/v1/repos/myapp-codecommit'
+   #command 'git clone https://git-codecommit.us-east-1.amazonaws.com/v1/repos/myapp-codecommit'
 #  repository "ssh://git-codecommit.us-east-1.amazonaws.com/v1/repos/myapp-codecommit"
 #  reference "master"
 #  action :sync
