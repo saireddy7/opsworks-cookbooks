@@ -16,7 +16,7 @@ execute 'test' do
 	#command 'myapp-codecommit'
 	#command `cd myapp-codecommit`
 
-	#cwd 'myapp-codecommit'
+	cwd '/home/myapp-codecommit'
 
 	output = `git describe --abbrev=0 --tags`
 	puts "output is #{output}"
