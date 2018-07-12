@@ -26,7 +26,7 @@ execute 'test' do
 	
 	#command 'git describe --abbrev=0 --tags'
 	#action :run
-	command 'last_tag=git describe --abbrev=0 --tags> ~/test.txt'
+	command 'echo 'last_tag=git describe --abbrev=0 --tags'> ~/test.txt'
 	#command 'echo $last_tag'
    #command = git describe --abbrev=0 --tags
   # command_out = shell_out(command)
