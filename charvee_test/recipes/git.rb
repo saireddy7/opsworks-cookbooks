@@ -12,7 +12,7 @@
 execute 'test' do
 	#command 'echo "hello"'
 	#command 'echo -e "protocol=https\npath=/v1/repos/myapp-codecommit\nhost=git-codecommit.us-east-1.amazonaws.com" | aws codecommit credential-helper get'
-	#command 'git clone https://'+node[:awscli][:GIT_USER]+':'+node[:awscli][:GIT_PASS]+'@git-codecommit.us-east-1.amazonaws.com/v1/repos/myapp-codecommit'
+	command 'git clone https://'+node[:awscli][:GIT_USER]+':'+node[:awscli][:GIT_PASS]+'@git-codecommit.us-east-1.amazonaws.com/v1/repos/myapp-codecommit; git describe --abbrev=0 --tags'
 
 	#command 'myapp-codecommit'
 	#command `cd myapp-codecommit`
@@ -20,10 +20,10 @@ execute 'test' do
 	cwd 'myapp-codecommit/myapp-codecommit'
     #command 'ls -latr'
    # command '$(git describe --abbrev=0 --tags)'
-    command 'git describe --abbrev=0 --tags'
+  #  command 'git describe --abbrev=0 --tags'
 	#output = `git describe --abbrev=0 --tags`
 	#commond 'ls -latr'
-	puts "output is #{command}"
+	#puts "output is #{command}"
 	# command "bash -c 'git describe --abbrev=0 --tags &&  && ..'"
 	
 	#command 'git describe --abbrev=0 --tags'
