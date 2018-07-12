@@ -17,6 +17,11 @@ execute 'test' do
 	#command ''+(git describe --abbrev=0 --tags)+''
 	command '$last_tag=git describe --abbrev=0 --tags> ~/etc/test.txt'
 	#command 'echo $last_tag'
+   command = 'git describe --abbrev=0 --tags'
+   command_out = shell_out(command)
+   node.set['my_attribute'] = command_out.stdout
+
+
 	command 'echo $last_tag > ~/.test'
    # command 'echo "'+(git describe --abbrev=0 --tags)+'" > ~/etc/test.txt'
   #  command 'echo $output'
