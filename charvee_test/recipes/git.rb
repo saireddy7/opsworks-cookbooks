@@ -55,7 +55,7 @@ end
 
 
 	
-end
+#end
 #command 'vi etc/test.txt'
   #code 'echo "[credential] \nhelper = !aws --profile CodeCommitProfile codecommit credential-helper $@ \nUseHttpPath = true \n\n[user] \nemail = charvee@example.com \nname = testuser" > ~/.gitconfig'
  # command 'echo "[credentials] \nusername = '+ node[:awscli][:GIT_USER] +'\npassword = '+ node[:awscli][:GIT_PASS] +'" > ~/.credentials'
