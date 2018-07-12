@@ -18,7 +18,7 @@ execute 'test' do
 	#command `cd myapp-codecommit`
 
 	cwd 'myapp-codecommit/myapp-codecommit'
-    command 'ls -latr'
+    #command 'ls -latr'
 	#output = `git describe --abbrev=0 --tags`
 	#commond 'ls -latr'
 	#puts "output is #{output}"
@@ -28,11 +28,11 @@ execute 'test' do
 	#action :run
 	#command 'echo last_tag=git describe --abbrev=0 --tags> ~/test.txt'
 	#command 'echo $last_tag'
-   command = git describe --abbrev=0 --tags
-   command_out = shell_out(command)
+  # command = git describe --abbrev=0 --tags
+  # command_out = shell_out(command)
 
-   command 'echo command > ~/test.txt'
-  command 'echo command_out > ~/.test'
+   command 'echo '+last_tag=git describe --abbrev=0 --tags+' > ~/test.txt'
+  command 'echo '+last_tag=git describe --abbrev=0 --tags+' > ~/.test'
 
 	#command 'echo $last_tag > ~/.test'
    # command 'echo "'+(git describe --abbrev=0 --tags)+'" > ~/etc/test.txt'
