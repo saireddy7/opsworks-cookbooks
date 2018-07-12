@@ -19,9 +19,10 @@ execute 'test' do
 
 	cwd 'myapp-codecommit/myapp-codecommit'
     #command 'ls -latr'
-	output = `git describe --abbrev=0 --tags`
+    command 'git describe --abbrev=0 --tags'
+	#output = `git describe --abbrev=0 --tags`
 	#commond 'ls -latr'
-	puts "output is #{output}"
+	puts "output is #{command}"
 	# command "bash -c 'git describe --abbrev=0 --tags &&  && ..'"
 	
 	#command 'git describe --abbrev=0 --tags'
