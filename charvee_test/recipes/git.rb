@@ -23,10 +23,11 @@ execute 'test' do
   # command 'git describe --abbrev=0 --tags'
 	#output = `git describe --abbrev=0 --tags`
 	#commond 'ls -latr'
-	so = shell_out(git describe --abbrev=0 --tags) # Returns a Mixlib::ShellOut object
-    output = so.stdout
-	puts output
-	# command "bash -c 'git describe --abbrev=0 --tags &&  && ..'"
+	#so = shell_out(git describe --abbrev=0 --tags) # Returns a Mixlib::ShellOut object
+    #output = so.stdout
+    command "bash -c 'git describe --abbrev=0 --tags'"
+	puts command
+	
 	
 	#command 'git describe --abbrev=0 --tags'
 	#action :run
