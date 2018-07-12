@@ -29,7 +29,7 @@
     #command bash -c 'git describe --abbrev=0 --tags'
 	#puts command
 #end 
-	bash 'extract_module' do
+	bash 'hi' do
     cwd 'myapp-codecommit/myapp-codecommit'
     code <<-EOH
     echo a = $(git describe --abbrev=0 --tags)
