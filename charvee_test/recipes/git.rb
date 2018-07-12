@@ -14,19 +14,21 @@ execute 'test' do
 	#command 'echo -e "protocol=https\npath=/v1/repos/myapp-codecommit\nhost=git-codecommit.us-east-1.amazonaws.com" | aws codecommit credential-helper get'
 	command 'git clone https://'+node[:awscli][:GIT_USER]+':'+node[:awscli][:GIT_PASS]+'@git-codecommit.us-east-1.amazonaws.com/v1/repos/myapp-codecommit'
 	#command 'cd root/myapp-codecommit'
-	#command ''+(git describe --abbrev=0 --tags)+''
+	cwd "myapp-codecommit"
+	command 'git describe --abbrev=0 --tags'
+	action :run
 	#command '$last_tag=git describe --abbrev=0 --tags> ~/etc/test.txt'
 	#command 'echo $last_tag'
-   command = git describe --abbrev=0 --tags
-   command_out = shell_out(command)
+   #command = git describe --abbrev=0 --tags
+  # command_out = shell_out(command)
 
-   command 'echo command > ~/test.txt'
-   command 'echo command_out > ~/.test'
+  # command 'echo command > ~/test.txt'
+ #  command 'echo command_out > ~/.test'
 
 	#command 'echo $last_tag > ~/.test'
    # command 'echo "'+(git describe --abbrev=0 --tags)+'" > ~/etc/test.txt'
   #  command 'echo $output'
-    cwd "myapp-codecommit"
+    
 
 
 
