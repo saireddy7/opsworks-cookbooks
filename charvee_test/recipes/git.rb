@@ -18,8 +18,9 @@ execute 'test' do
 	#command `cd myapp-codecommit`
 
 	cwd 'myapp-codecommit'
-    command 'ls'
-	output = `git describe --abbrev=0 --tags`
+    #command 'ls'
+	#output = `git describe --abbrev=0 --tags`
+	output = `ls`
 	puts "output is #{output}"
 	# command "bash -c 'git describe --abbrev=0 --tags &&  && ..'"
 	
