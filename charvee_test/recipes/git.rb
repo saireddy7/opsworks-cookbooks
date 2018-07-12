@@ -16,10 +16,11 @@ execute 'test' do
 	#command 'myapp-codecommit'
 	#command `cd myapp-codecommit`
 
-	cwd 'cd myapp-codecommit'
+	cwd '/myapp-codecommit'
 
 	output = `git describe --abbrev=0 --tags`
 	puts "output is #{output}"
+	# command "bash -c 'git describe --abbrev=0 --tags &&  && ..'"
 	
 	#command 'git describe --abbrev=0 --tags'
 	#action :run
