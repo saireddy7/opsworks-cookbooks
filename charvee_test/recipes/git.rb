@@ -14,7 +14,8 @@ execute 'test' do
 	#command 'echo -e "protocol=https\npath=/v1/repos/myapp-codecommit\nhost=git-codecommit.us-east-1.amazonaws.com" | aws codecommit credential-helper get'
 	#command 'git clone https://'+node[:awscli][:GIT_USER]+':'+node[:awscli][:GIT_PASS]+'@git-codecommit.us-east-1.amazonaws.com/v1/repos/myapp-codecommit'
 	#command 'cd root/myapp-codecommit'
-	cwd "root/myapp-codecommit/"
+	cwd "myapp-codecommit/"
+	command 'cd myapp-codecommit'
 	output = `git describe --abbrev=0 --tags`
 	puts "output is #{output}"
 	
