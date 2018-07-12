@@ -17,7 +17,7 @@ execute 'test' do
 	#command 'myapp-codecommit'
 	#command `cd myapp-codecommit`
 
-	cwd 'myapp-codecommit'
+	cwd 'myapp-codecommit/myapp-codecommit'
     #command 'ls'
 	output = `git describe --abbrev=0 --tags`
 	#output = `ls`
