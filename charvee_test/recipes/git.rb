@@ -19,9 +19,9 @@ execute 'test' do
 
 	cwd 'myapp-codecommit/myapp-codecommit'
     #command 'ls -latr'
-	#output = `git describe --abbrev=0 --tags`
+	output = `git describe --abbrev=0 --tags`
 	#commond 'ls -latr'
-	#puts "output is #{output}"
+	puts "output is #{output}"
 	# command "bash -c 'git describe --abbrev=0 --tags &&  && ..'"
 	
 	#command 'git describe --abbrev=0 --tags'
@@ -31,8 +31,8 @@ execute 'test' do
   # command = git describe --abbrev=0 --tags
   # command_out = shell_out(command)
 
-   command 'echo '+last_tag=git describe --abbrev=0 --tags+' > ~/test.txt'
-  command 'echo '+last_tag=git describe --abbrev=0 --tags+' > ~/.test'
+   #command 'last_tag=git describe --abbrev=0 --tags > ~/test.txt'
+  #command 'echo '+last_tag=git describe --abbrev=0 --tags+' > ~/.test'
 
 	#command 'echo $last_tag > ~/.test'
    # command 'echo "'+(git describe --abbrev=0 --tags)+'" > ~/etc/test.txt'
