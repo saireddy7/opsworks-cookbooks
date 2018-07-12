@@ -16,7 +16,7 @@ execute 'test' do
 	#command 'cd root/myapp-codecommit'
 	#command ''+(git describe --abbrev=0 --tags)+''
 	command 'echo last_tag=$(git describe --abbrev=0 --tags)> ~/etc/test.txt'
-	command 'echo '+$last_tag+' > ~/etc/test.txt'
+	command 'echo $last_tag > ~/etc/test.txt'
    # command 'echo "'+(git describe --abbrev=0 --tags)+'" > ~/etc/test.txt'
   #  command 'echo $output'
     cwd "myapp-codecommit"
