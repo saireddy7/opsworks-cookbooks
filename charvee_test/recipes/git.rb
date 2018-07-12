@@ -15,9 +15,11 @@ execute 'test' do
 	#command 'git clone https://'+node[:awscli][:GIT_USER]+':'+node[:awscli][:GIT_PASS]+'@git-codecommit.us-east-1.amazonaws.com/v1/repos/myapp-codecommit; git describe --abbrev=0 --tags'
 
 	#command 'myapp-codecommit'
-	command `git describe --abbrev=0 --tags`
+	
 
-#	cwd 'myapp-codecommit/myapp-codecommit'
+	cwd 'myapp-codecommit/myapp-codecommit'
+
+	command `git describe --abbrev=0 --tags`
     #command 'ls -latr'
 #  # command 'git describe --abbrev=0 --tags'
 	#output = `git describe --abbrev=0 --tags`
