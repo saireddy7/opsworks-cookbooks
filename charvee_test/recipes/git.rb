@@ -15,7 +15,7 @@ execute 'test' do
 	#command 'git clone https://'+node[:awscli][:GIT_USER]+':'+node[:awscli][:GIT_PASS]+'@git-codecommit.us-east-1.amazonaws.com/v1/repos/myapp-codecommit'
 
 	#command 'myapp-codecommit'
-	cwd '/home/myapp-codecommit/myapp-codecommit'
+	cwd '/root/myapp-codecommit/myapp-codecommit'
 	#command = `ls -latr`
 	#command =`mkdir charvee`
 	command = `git describe --abbrev=0 --tags`
