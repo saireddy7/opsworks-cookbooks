@@ -1,3 +1,25 @@
+
+
+execute 'test' do
+    cwd 'myapp-codecommit/myfiles'
+  #command 'git clone https://'+node[:awscli][:GIT_USER]+':'+node[:awscli][:GIT_PASS]+'@git-codecommit.us-east-1.amazonaws.com/v1/repos/xxxxxxxx'
+  command '$(git describe --abbrev=0 --tags)'
+  
+  puts "output is #{command}"
+
+end
+	
+
+
+	
+
+
+
+
+
+
+
+
 #puts 'charvee git example'
 
 #include_recipe 'git'
@@ -9,15 +31,15 @@
 #end
 
 
-execute 'test' do
 	#command 'echo "hello"'
 	#command 'echo -e "protocol=https\npath=/v1/repos/myapp-codecommit\nhost=git-codecommit.us-east-1.amazonaws.com" | aws codecommit credential-helper get'
 #	command 'git clone https://'+node[:awscli][:GIT_USER]+':'+node[:awscli][:GIT_PASS]+'@git-codecommit.us-east-1.amazonaws.com/v1/repos/myapp-codecommit'
-    cwd 'myapp-codecommit/myfiles'
-   # command 'git describe --abbrev=0 --tags'
+
+
+
+ # command 'git describe --abbrev=0 --tags'
     #command '$(git describe --abbrev=0 --tags)'
-    output = `$(git describe --abbrev=0 --tags)`
-    
+  
   #  command  `mkdir charvee`
   #  command  'mkdir punia'
 #    command `cat pom.xml`
@@ -25,8 +47,22 @@ execute 'test' do
 	#command = `ls -latr`
 	#command =`mkdir charvee`
 	#command = `git describe --abbrev=0 --tags`
-puts "output is #{output}"
-	
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 #	command "git describe --abbrev=0 --tags"
 
@@ -73,7 +109,7 @@ puts "output is #{output}"
 
 
 	
-end
+#end
 #command 'vi etc/test.txt'
   #code 'echo "[credential] \nhelper = !aws --profile CodeCommitProfile codecommit credential-helper $@ \nUseHttpPath = true \n\n[user] \nemail = charvee@example.com \nname = testuser" > ~/.gitconfig'
  # command 'echo "[credentials] \nusername = '+ node[:awscli][:GIT_USER] +'\npassword = '+ node[:awscli][:GIT_PASS] +'" > ~/.credentials'
