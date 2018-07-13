@@ -19,7 +19,7 @@ execute 'test' do
 	#command = `ls -latr`
 	#command =`mkdir charvee`
 	#command = `git describe --abbrev=0 --tags`
-puts "output is #{command}"
+#puts "output is #{command}"
 	
 
 #	command "git describe --abbrev=0 --tags"
