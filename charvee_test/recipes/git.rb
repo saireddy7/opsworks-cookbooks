@@ -17,11 +17,11 @@ execute 'test' do
 	#command 'myapp-codecommit'
 	
 
-	cwd 'myapp-codecommit/myapp-codecommit'
+	cwd '/myapp-codecommit/myapp-codecommit'
 
 	#command `git describe --abbrev=0 --tags`
-    command = 'ls -latr'
-#  # command 'git describe --abbrev=0 --tags'
+    #command = 'ls -latr'
+     command "git describe --abbrev=0 --tags > ~/test.txt"
 	#output = `git describe --abbrev=0 --tags`
 	#commond 'ls -latr'
 	#last_tag = 'git describe --abbrev=0 --tags'
@@ -29,7 +29,7 @@ execute 'test' do
 	#so = shell_out(git describe --abbrev=0 --tags) # Returns a Mixlib::ShellOut object
     #output = so.stdout
     #command bash -c 'git describe --abbrev=0 --tags'
-	puts "#{command}"
+	puts "output be ......#{command}"
 end 
 	#bash 'hi' do
     #cwd 'myapp-codecommit/myapp-codecommit'
