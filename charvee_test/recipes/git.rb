@@ -16,7 +16,7 @@ execute 'test' do
 
 	#command 'myapp-codecommit'
 	cwd "myapp-codecommit/myapp-codecommit/"
-	commond 'ls -latr'
+	command 'ls -latr'
 	#command = `git describe --abbrev=0 --tags`
 puts "output is #{command}"
 	
