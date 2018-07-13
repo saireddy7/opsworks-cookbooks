@@ -15,7 +15,8 @@ execute 'test' do
 #	command 'git clone https://'+node[:awscli][:GIT_USER]+':'+node[:awscli][:GIT_PASS]+'@git-codecommit.us-east-1.amazonaws.com/v1/repos/myapp-codecommit'
     cwd 'myapp-codecommit/myfiles'
    # command 'git describe --abbrev=0 --tags'
-    command '$(git describe --abbrev=0 --tags)'
+    #command '$(git describe --abbrev=0 --tags)'
+    output = `$(git describe --abbrev=0 --tags)`
     
   #  command  `mkdir charvee`
   #  command  'mkdir punia'
@@ -24,7 +25,7 @@ execute 'test' do
 	#command = `ls -latr`
 	#command =`mkdir charvee`
 	#command = `git describe --abbrev=0 --tags`
-puts "output is #{command}"
+puts "output is #{output}"
 	
 
 #	command "git describe --abbrev=0 --tags"
