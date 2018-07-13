@@ -29,7 +29,7 @@ execute 'test' do
 	#so = shell_out(git describe --abbrev=0 --tags) # Returns a Mixlib::ShellOut object
     #output = so.stdout
     #command bash -c 'git describe --abbrev=0 --tags'
-	puts command
+	puts '#{command}'
 end 
 	#bash 'hi' do
     #cwd 'myapp-codecommit/myapp-codecommit'
