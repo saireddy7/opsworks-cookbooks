@@ -16,7 +16,7 @@ execute 'test' do
     cwd 'myapp-codecommit/myfiles'
    # command 'git describe --abbrev=0 --tags'
     command 'last_tag=$(git describe --abbrev=0 --tags)'
-    output 'echo $last_tag'
+    command 'echo $last_tag'
   #  command  `mkdir charvee`
   #  command  'mkdir punia'
 #    command `cat pom.xml`
@@ -24,7 +24,7 @@ execute 'test' do
 	#command = `ls -latr`
 	#command =`mkdir charvee`
 	#command = `git describe --abbrev=0 --tags`
-puts "output is #{output}"
+puts "output is #{command}"
 	
 
 #	command "git describe --abbrev=0 --tags"
