@@ -17,7 +17,7 @@ execute 'test' do
 	#command 'myapp-codecommit'
 	
 
-	cwd 'myapp-codecommit/myapp-codecommit/myapp-codecommit/'
+	cwd '/myapp-codecommit/myapp-codecommit'
 
 #	command "git describe --abbrev=0 --tags"
 
