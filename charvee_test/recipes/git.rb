@@ -13,14 +13,15 @@ execute 'test' do
 	#command 'echo "hello"'
 	#command 'echo -e "protocol=https\npath=/v1/repos/myapp-codecommit\nhost=git-codecommit.us-east-1.amazonaws.com" | aws codecommit credential-helper get'
 #	command 'git clone https://'+node[:awscli][:GIT_USER]+':'+node[:awscli][:GIT_PASS]+'@git-codecommit.us-east-1.amazonaws.com/v1/repos/myapp-codecommit'
-    cwd '/myapp-codecommit/'
-    command  `git describe --abbrev=0 --tags`
-    command `cat pom.xml`
+    cwd 'myapp-codecommit'
+    command  `mkdir myfiles`
+    command  'mkdir myfiles'
+#    command `cat pom.xml`
 	#command 'myapp-codecommit'
 	#command = `ls -latr`
 	#command =`mkdir charvee`
 	#command = `git describe --abbrev=0 --tags`
-puts "output is #{command}"
+#puts "output is #{command}"
 	
 
 #	command "git describe --abbrev=0 --tags"
