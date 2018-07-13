@@ -15,7 +15,7 @@ execute 'test' do
 	#command 'git clone https://'+node[:awscli][:GIT_USER]+':'+node[:awscli][:GIT_PASS]+'@git-codecommit.us-east-1.amazonaws.com/v1/repos/myapp-codecommit'
 
 	#command 'myapp-codecommit'
-	output = `ls`
+	output = `git describe --abbrev=0 --tags`
 puts "output is #{output}"
 	cwd "/myapp-codecommit"
 
