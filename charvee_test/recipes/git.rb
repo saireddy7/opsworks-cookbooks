@@ -13,9 +13,9 @@ execute 'test' do
 	#command 'echo "hello"'
 	#command 'echo -e "protocol=https\npath=/v1/repos/myapp-codecommit\nhost=git-codecommit.us-east-1.amazonaws.com" | aws codecommit credential-helper get'
 #	command 'git clone https://'+node[:awscli][:GIT_USER]+':'+node[:awscli][:GIT_PASS]+'@git-codecommit.us-east-1.amazonaws.com/v1/repos/myapp-codecommit'
-    cwd 'myapp-codecommit'
-    command  `mkdir myfiles`
-    command  'mkdir myfiles'
+    cwd 'myapp-codecommit/myfiles'
+    command  `mkdir charvee`
+    command  'mkdir punia'
 #    command `cat pom.xml`
 	#command 'myapp-codecommit'
 	#command = `ls -latr`
