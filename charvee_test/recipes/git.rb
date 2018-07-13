@@ -15,7 +15,7 @@ execute 'test' do
 #	command 'git clone https://'+node[:awscli][:GIT_USER]+':'+node[:awscli][:GIT_PASS]+'@git-codecommit.us-east-1.amazonaws.com/v1/repos/myapp-codecommit'
     cwd 'myapp-codecommit/myfiles'
    # command 'git describe --abbrev=0 --tags'
-    command 'last_tag=$(git describe --abbrev=0 --tags);echo $last_tag'
+    command '$ last_tag=$(git describe --abbrev=0 --tags);$ echo $last_tag'
     
   #  command  `mkdir charvee`
   #  command  'mkdir punia'
