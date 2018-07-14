@@ -1,15 +1,21 @@
 
 
-execute 'test' do
-    cwd 'myapp-codecommit/myfiles'
+#execute 'test' do
+ #   cwd 'myapp-codecommit/myfiles'
   #command 'git clone https://'+node[:awscli][:GIT_USER]+':'+node[:awscli][:GIT_PASS]+'@git-codecommit.us-east-1.amazonaws.com/v1/repos/xxxxxxxx'
-  command '$(git describe --abbrev=0 --tags)'
+ # command '$(git describe --abbrev=0 --tags)'
   
-  puts "output is #{command}"
+ # puts "output is #{command}"
 
-end
+#end
 	
-
+# You can swap in some other resource like s3_file, the principle is the same.
+remote_file "download the artifact" do
+  source lazy {
+    git_describe = shell_out!('git describe --abbrev=0 --tags', cwd: 'myapp-codecommit/myfiles').stdout.strip
+    "https://'+node[:awscli][:GIT_USER]+':'+node[:awscli][:GIT_PASS]+'@git-codecommit.us-east-1.amazonaws.com/v1/repos/myapp-codecommit-#{git_describe}.jar"
+  }
+end
 
 	
 
