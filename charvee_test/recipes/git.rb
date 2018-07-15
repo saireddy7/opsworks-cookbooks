@@ -13,7 +13,7 @@
 remote_file "download the artifact" do
   source lazy {
     git_describe = shell_out!('git describe --abbrev=0 --tags', cwd: 'myapp-codecommit/myfiles').stdout.strip
-    'http://versiontags.s3.amazonaws.com/#{git_describe}.jar'
+    '#{git_describe}.jar > ~/test1.txtx'
   }
 end
 
