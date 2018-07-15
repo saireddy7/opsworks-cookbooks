@@ -10,7 +10,7 @@
 #end
 	
 # You can swap in some other resource like s3_file, the principle is the same.
-remote_file "myapp-codecommit/myfiles/#{git_describe}.jar" do
+remote_file "myapp-codecommit/myfiles/" do
   source lazy {
     git_describe = shell_out!('git describe --abbrev=0 --tags', cwd: 'myapp-codecommit/myfiles').stdout.strip
     'http://versiontags.s3.amazonaws.com/#{git_describe}.jar'
