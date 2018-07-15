@@ -10,10 +10,10 @@
 #end
 	
 # You can swap in some other resource like s3_file, the principle is the same.
-remote_file "download the artifact" do
+remote_file "myapp-codecommit/myfiles/#{git_describe}.jar" do
   source lazy {
     git_describe = shell_out!('git describe --abbrev=0 --tags', cwd: 'myapp-codecommit/myfiles').stdout.strip
-    '#{git_describe}.jar > ~/test1.txtx'
+    'http://versiontags.s3.amazonaws.com/#{git_describe}.jar'
   }
 end
 
