@@ -10,13 +10,12 @@
 #end
 	
 # You can swap in some other resource like s3_file, the principle is the same.
-remote_file "artifact" do
-  source lazy {
-    git_describe = shell_out!('git describe --abbrev=0 --tags', cwd: 'myapp-codecommit/myfiles').stdout.strip
-    "https://s3.amazonaws.com/versiontags/"
+#  source lazy {
+#    git_describe = shell_out!('git describe --abbrev=0 --tags', cwd: 'myapp-codecommit/myfiles').stdout.strip
+#    "https://s3.amazonaws.com/versiontags/"
     #"https://s3.amazonaws.com/versiontags/master-1.0.177.jar"
-  }
-end
+ # }
+#end
 
 
 
