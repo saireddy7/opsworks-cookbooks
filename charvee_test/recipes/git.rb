@@ -21,6 +21,18 @@ end
 
 
 
+execute "package_xyz" do
+cwd "myapp-codecommit/myfiles"
+command <<-EOH
+last_tag=$(git describe --abbrev=0 --tags)
+EOH
+creates "opt/$last_tag"
+end
+
+
+
+
+
 #'s3cmd get s3://versiontags/#{git_describe}.jar'
 	#https://s3.amazonaws.com/versiontags/#{git_describe}.jar
 
