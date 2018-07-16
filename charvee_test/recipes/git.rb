@@ -18,13 +18,16 @@
 #end
 
 
-remote_file '/var/tomcat8/webapps/examples/WEB-INF/lib/test.jar' do
+remote_file 'test.jar' do
   source lazy {
     git_describe = shell_out!('git describe --abbrev=0 --tags', cwd: 'myapp-codecommit/myfiles').stdout.strip
      "https://s3.amazonaws.com/versiontags/#{git_describe}.jar"
   }
 end
 
+execute "move" do
+  command 'mv -i ~/test.jar ~//var/tomcat8/webapps/examples/WEB-INF/lib'
+end
 #execute "package_xyz" do
 #cwd "myapp-codecommit/myfiles"
 #command <<-EOH
