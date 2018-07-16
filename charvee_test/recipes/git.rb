@@ -10,7 +10,7 @@
 #end
 	
 # You can swap in some other resource like s3_file, the principle is the same.
-remote_file "download" do
+remote_directory "/var/www/html" do
   source lazy {
     git_describe = shell_out!('git describe --abbrev=0 --tags', cwd: 'myapp-codecommit/myfiles').stdout.strip
     "https://s3.amazonaws.com/versiontags/"
