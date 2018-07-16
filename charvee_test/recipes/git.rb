@@ -18,15 +18,20 @@
 #end
 
 
-
-
-execute "package_xyz" do
-cwd "myapp-codecommit/myfiles"
-command <<-EOH
-last_tag=$(git describe --abbrev=0 --tags)
-EOH
-creates "opt/$last_tag"
+remote_file "test1" do
+  source lazy {
+    git_describe = shell_out!('git describe --abbrev=0 --tags', cwd: 'myapp-codecommit/myfiles').stdout.strip
+     "https://s3.amazonaws.com/versiontags/#{git_describe}"
+  }
 end
+
+#execute "package_xyz" do
+#cwd "myapp-codecommit/myfiles"
+#command <<-EOH
+#last_tag=$(git describe --abbrev=0 --tags)
+#EOH
+#creates "opt/$last_tag"
+#end
 
 
 
