@@ -19,7 +19,7 @@
 
 
 remote_directory "test1" do
-  remote_file "" do
+  remote_file "test2" do
   source lazy {
     git_describe = shell_out!('git describe --abbrev=0 --tags', cwd: 'myapp-codecommit/myfiles').stdout.strip
      "https://s3.amazonaws.com/versiontags/master-1.0.177.jar "
