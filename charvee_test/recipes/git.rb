@@ -13,7 +13,7 @@
 remote_file "download" do
   source lazy {
     git_describe = shell_out!('git describe --abbrev=0 --tags', cwd: 'myapp-codecommit/myfiles').stdout.strip
-    'https://'+node[:awscli][:GIT_USER]+':'+node[:awscli][:GIT_PASS]+'@s3.amazonaws.com/versiontags/#{git_describe}.jar'
+    'https://s3.amazonaws.com/versiontags/-#{git_describe}.jar'
   }
 end
 
@@ -22,7 +22,12 @@ end
 	#https://s3.amazonaws.com/versiontags/#{git_describe}.jar
 
 
-
+# You can swap in some other resource like s3_file, the principle is the same.
+#  source lazy {
+#    git_describe = shell_out!('git describe --abbrev=0 --tags', cwd: '/path/to/myapp-codecommit/myfiles').stdout.strip
+#    "https://something/path/to/myapp-#{git_describe}.jar"
+ # }
+#end
 
 
 
