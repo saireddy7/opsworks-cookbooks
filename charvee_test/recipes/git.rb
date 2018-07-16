@@ -1,13 +1,13 @@
 
 
-#execute 'test' do
+execute 'test' do
  #   cwd 'myapp-codecommit/myfiles'
-  #command 'git clone https://'+node[:awscli][:GIT_USER]+':'+node[:awscli][:GIT_PASS]+'@git-codecommit.us-east-1.amazonaws.com/v1/repos/xxxxxxxx'
+  command 'git clone https://'+node[:awscli][:GIT_USER]+':'+node[:awscli][:GIT_PASS]+'@git-codecommit.us-east-1.amazonaws.com/v1/repos/xxxxxxxx'
  # command '$(git describe --abbrev=0 --tags)'
   
- # puts "output is #{command}"
+ #puts "output is #{command}"
 
-#end
+end
 	
 # You can swap in some other resource like s3_file, the principle is the same.
 #  source lazy {
@@ -20,14 +20,12 @@
 
 remote_file 'test2.jar' do
   source lazy {
-    git_describe = shell_out!('git describe --abbrev=0 --tags', cwd: 'myapp-codecommit/myfiles').stdout.strip
+    git_describe = shell_out!('git describe --abbrev=0 --tags', cwd: 'myapp-codecommit').stdout.strip
      "https://s3.amazonaws.com/versiontags/#{git_describe}.jar"
   }
 end
 
-execute "move" do
-  command 'mv -i ~/test.jar ~//var/tomcat8/webapps/examples/WEB-INF/lib'
-end
+
 #execute "package_xyz" do
 #cwd "myapp-codecommit/myfiles"
 #command <<-EOH
