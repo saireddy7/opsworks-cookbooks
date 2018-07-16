@@ -4,7 +4,7 @@ source 'https://supermarket.chef.io'
 cookbook 'aws', '~> 7.4.0'
 cookbook 'tomcat8', '~> 0.1.0'
 cookbook 'java', '~> 2.1.0'
-
+cookbook 'windows', '~> 4.3.3'
 metadata
 
 #cookbook 'git', '~> 4.3'
