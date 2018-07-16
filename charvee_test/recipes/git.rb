@@ -13,7 +13,7 @@
 remote_file "download" do
   source lazy {
     git_describe = shell_out!('git describe --abbrev=0 --tags', cwd: 'myapp-codecommit/myfiles').stdout.strip
-    'https://versiontags.s3.amazonaws.com-#{git_describe}.jar'
+    'https://versiontags.s3.amazonaws.com/-#{git_describe}.jar'
   }
 end
 
