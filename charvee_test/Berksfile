@@ -2,6 +2,8 @@
 source 'https://supermarket.chef.io'
 
 cookbook 'aws', '~> 7.4.0'
+cookbook 'tomcat', '~> 3.0.0'
+cookbook 'tomcat-all', '~> 0.2.0'
 metadata
 
 #cookbook 'git', '~> 4.3'
