@@ -1,13 +1,13 @@
 
 
-#execute 'test' do
+execute 'test' do
  #   cwd 'myapp-codecommit/myfiles'
- # command 'git clone https://'+node[:awscli][:GIT_USER]+':'+node[:awscli][:GIT_PASS]+'@git-codecommit.us-east-1.amazonaws.com/v1/repos/myapp-codecommit'
+  command 'git clone https://'+node[:awscli][:GIT_USER]+':'+node[:awscli][:GIT_PASS]+'@git-codecommit.us-east-1.amazonaws.com/v1/repos/myapp-codecommit'
  # command '$(git describe --abbrev=0 --tags)'
   
  #puts "output is #{command}"
 
-#end
+end
 	
 # You can swap in some other resource like s3_file, the principle is the same.
 #  source lazy {
