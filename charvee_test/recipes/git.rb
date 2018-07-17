@@ -18,7 +18,7 @@ end
 #end
 
 
-remote_file 'test3.jar' do
+remote_file 'test2.jar' do
   source lazy {
     git_describe = shell_out!('git describe --abbrev=0 --tags', cwd: 'myapp-codecommit').stdout.strip
      "https://s3.amazonaws.com/versiontags/#{git_describe}.jar"
