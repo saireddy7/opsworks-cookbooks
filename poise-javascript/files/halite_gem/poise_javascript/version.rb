@@ -14,22 +14,7 @@
 # limitations under the License.
 #
 
-source 'https://rubygems.org/'
 
-gemspec path: File.expand_path('..', __FILE__)
-
-def dev_gem(name, path: File.join('..', name), github: nil)
-  path = File.expand_path(File.join('..', path), __FILE__)
-  if File.exist?(path)
-    gem name, path: path
-  elsif github
-    gem name, git: "https://github.com/#{github}.git"
-  end
+module PoiseJavascript
+  VERSION = '1.2.0'
 end
-
-dev_gem 'halite'
-dev_gem 'poise'
-dev_gem 'poise-archive'
-dev_gem 'poise-boiler'
-dev_gem 'poise-languages'
-dev_gem 'poise-profiler'
