@@ -30,7 +30,7 @@ include_recipe "nodejs"
 include_recipe "pm2"
 
 execute "start node app via PM2" do
-  cwd "~/test2"
+  cwd "/test2"
   command "pm2 start hello.js"
 end
 
