@@ -19,12 +19,19 @@
 #end
 
 
-remote_file 'test2.jar' do
-  source lazy {
-    git_describe = shell_out!('git describe --abbrev=0 --tags', cwd: 'node-jenkins-pipeline-test').stdout.strip
-     "https://s3.amazonaws.com/versiontags/#{git_describe}"
+#remote_file 'test2.jar' do
+ # source lazy {
+  #  git_describe = shell_out!('git describe --abbrev=0 --tags', cwd: 'node-jenkins-pipeline-test').stdout.strip
+   #  "https://s3.amazonaws.com/versiontags/#{git_describe}"
      #"https://s3.amazonaws.com/versiontags/#{git_describe}.jar"
-  }
+  #}
+#end
+include_recipe "nodejs"
+include_recipe "pm2"
+
+execute "start node app via PM2" do
+  cwd "~/test2"
+  command "pm2 start hello.js"
 end
 
 
